@@ -358,8 +358,8 @@ declare -f                # 列出函数定义
 # 条件判断（兼容 posix sh 的条件判断）：man test
 ##############################################################################
 
-statement1 && statement2  # and 操作符
-statement1 || statement2  # or 操作符
+statement1 && statement2  # and 操作符，只有当statement1返回了一个0的返回值，才会执行statement2
+statement1 || statement2  # or 操作符，只有当statement1返回了一个0的返回值，才会执行statement2
 
 exp1 -a exp2              # exp1 和 exp2 同时为真时返回真（POSIX XSI扩展）
 exp1 -o exp2              # exp1 和 exp2 有一个为真就返回真（POSIX XSI扩展）
